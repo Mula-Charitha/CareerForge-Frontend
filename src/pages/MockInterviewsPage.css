@@ -1,0 +1,437 @@
+.mock-interviews-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.header-actions-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-start-practice {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35);
+  transition: all var(--transition-normal);
+}
+
+.btn-start-practice:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 92, 246, 0.45);
+}
+
+.btn-add-interview {
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.btn-add-interview:hover {
+  border-color: var(--primary-accent);
+  transform: translateY(-2px);
+}
+
+/* Practice Drill Banner */
+.practice-session-card {
+  background: linear-gradient(135deg, rgba(30, 27, 75, 0.8), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.practice-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.practice-badge {
+  background: rgba(139, 92, 246, 0.2);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.practice-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fbbf24;
+  font-family: monospace;
+}
+
+.btn-timer-toggle {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-close-practice {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-close-practice:hover {
+  color: #ef4444;
+}
+
+.practice-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.practice-type-tag {
+  font-size: 0.85rem;
+  color: #a5b4fc;
+}
+
+.practice-question-text {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #ffffff;
+  margin: 0;
+}
+
+.practice-hint {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  margin: 0;
+}
+
+.practice-notes-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.practice-notes-area label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.practice-notes-area textarea {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.practice-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.btn-next-q {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-finish-practice {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Stats */
+.interview-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.stat-card {
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.stat-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.stat-num {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.stat-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* Filter Row */
+.interview-filter-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filter-pill {
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.filter-pill.pill-active {
+  background: var(--primary-accent);
+  color: white;
+  border-color: var(--primary-accent);
+  font-weight: 600;
+}
+
+/* Interviews Grid */
+.interviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.25rem;
+}
+
+.interview-card {
+  background: var(--surface-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all var(--transition-normal);
+}
+
+.interview-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.interview-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.interview-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.interview-company-role {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 0.3rem;
+}
+
+.badge-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+}
+
+.status-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.status-scheduled { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.status-completed { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+.status-cancelled { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+.type-tag {
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #c4b5fd;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.interview-details-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.rating-tag {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.feedback-section {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.feedback-section strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.feedback-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.strength-box, .improve-box {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.box-title {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.strength-box .box-title { color: #34d399; }
+.improve-box .box-title { color: #fbbf24; }
+
+.strength-box p, .improve-box p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.interview-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.75rem;
+  margin-top: auto;
+}
+
+.btn-card-edit {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-card-edit:hover {
+  border-color: var(--primary-accent);
+}
+
+.btn-card-delete {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.btn-card-delete:hover {
+  color: #ef4444;
+}
+
+/* Modals */
+.modal-content.interview-modal {
+  max-width: 600px;
+}
+
+.interview-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+/* Empty State */
+.empty-mock-state {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background: var(--surface-bg);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--radius-lg);
+}
+
+.empty-mock-state h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.empty-mock-state p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+}
